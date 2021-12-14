@@ -1,0 +1,68 @@
+
+/* Before we can start styling a page using CSS, we need to remove these default browser-enforced styles. To do this, we'll apply some default CSS values for every element in the page to level the playing field all at once.  */
+/* We just told every element on the page to not have any margin or border unless we explicitly tell it to. Now we don't have to concern ourselves with undoing built-in browser styles one by one. */
+/* The asterisk * we used here is used quite often in programming. It is typically called a wildcard, but in CSS it is known as a universal selector. This is essentially a catch-all selector that says, "I won't match one thing—I'll match everything!" */
+    
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* apply styles to the body */
+body {
+    /* more on this crazy alphanumerical value in a minute! */
+    color: #39a6b2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* apply styles to the header (other ways to apply styles to padding*/
+/*  /* Applies 20px to every side (top, right, bottom, left)
+ header {
+    padding: 20px;
+  }
+ 
+  /* Applies 20px to the top and bottom, then 35px to the left and right
+  header {
+    padding: 20px 35px;
+  }
+ 
+  /* Applies 10px to the top, 15px to the right, 20px to the bottom, 25px to the left (in that specific clockwise order)
+  header {
+    padding: 10px 15px 20px 25px;
+  } */
+
+header{
+    padding-top: 20px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+    background-color: #39a6b2;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #fce138;
+    margin: 0;
+    display: inline;
+}
+
+header a {
+    text-decoration: none; /* We used a new property here as well, the text-decoration property. The text-decoration property applies underline, strikethrough, or overline styles to text. By default, the value is none, so we don't usually have to explicitly tell it not to do this. With <a> elements, however, the browser automatically applies a blue color and an underline, and we don't want the links to look like that.  */
+    color: #fce138;
+}
+
+header nav {
+float: right;
+margin: 7px 0;
+}
+
+header nav ul li {
+display: inline;
+}
+
+header nav ul li a {
+margin: 0 30px;
+font-weight: lighter;
+font-size: 22px;
+}
