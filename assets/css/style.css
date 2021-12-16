@@ -1,19 +1,18 @@
-
 /* Before we can start styling a page using CSS, we need to remove these default browser-enforced styles. To do this, we'll apply some default CSS values for every element in the page to level the playing field all at once.  */
 /* We just told every element on the page to not have any margin or border unless we explicitly tell it to. Now we don't have to concern ourselves with undoing built-in browser styles one by one. */
 /* The asterisk * we used here is used quite often in programming. It is typically called a wildcard, but in CSS it is known as a universal selector. This is essentially a catch-all selector that says, "I won't match one thing—I'll match everything!" */
-    
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* apply styles to the body */
 body {
-    /* more on this crazy alphanumerical value in a minute! */
-    color: #39a6b2;
-    font-family: Arial, Helvetica, sans-serif;
+  /* more on this crazy alphanumerical value in a minute! */
+  color: #39a6b2;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* apply styles to the header (other ways to apply styles to padding*/
@@ -32,61 +31,119 @@ body {
     padding: 10px 15px 20px 25px;
   } */
 
-header{
-    padding-top: 20px;
-    padding-right: 35px;
-    padding-bottom: 20px;
-    padding-left: 35px;
-    background-color: #39a6b2;
+header {
+  padding-top: 20px;
+  padding-right: 35px;
+  padding-bottom: 20px;
+  padding-left: 35px;
+  background-color: #39a6b2;
 }
 
 header h1 {
-    font-weight: bold;
-    font-size: 36px;
-    color: #fce138;
-    margin: 0;
-    display: inline;
+  font-weight: bold;
+  font-size: 36px;
+  color: #fce138;
+  margin: 0;
+  display: inline;
 }
 
 header a {
-    text-decoration: none; /* We used a new property here as well, the text-decoration property. The text-decoration property applies underline, strikethrough, or overline styles to text. By default, the value is none, so we don't usually have to explicitly tell it not to do this. With <a> elements, however, the browser automatically applies a blue color and an underline, and we don't want the links to look like that.  */
-    color: #fce138;
+  text-decoration: none; /* We used a new property here as well, the text-decoration property. The text-decoration property applies underline, strikethrough, or overline styles to text. By default, the value is none, so we don't usually have to explicitly tell it not to do this. With <a> elements, however, the browser automatically applies a blue color and an underline, and we don't want the links to look like that.  */
+  color: #fce138;
 }
 
 header nav {
-float: right;
-margin: 7px 0;
+  float: right;
+  margin: 7px 0;
 }
 
 header nav ul li {
-display: inline;
+  display: inline;
 }
 
 header nav ul li a {
-margin: 0 30px;
-font-weight: lighter;
-font-size: 22px;
+  margin: 0 30px;
+  font-weight: lighter;
+  font-size: 22px;
 }
 
 footer {
-    background: #fce138;
-    width: 100%;
-    padding: 40px 35px;
+  background: #fce138;
+  width: 100%;
+  padding: 40px 35px;
 }
 
 footer h2 {
-    display: inline;
-    color: #024e76;
-    font-size: 30px;
-    margin: 0;
+  display: inline;
+  color: #024e76;
+  font-size: 30px;
+  margin: 0;
 }
 
 footer div {
-    float: right;
-    line-height: 1.5;
-    text-align: right;
+  float: right;
+  line-height: 1.5;
+  text-align: right;
 }
 
 footer a {
-    color: #024e76;
+  color: #024e76;
 }
+
+
+section {
+  padding: 60px;  
+}
+
+/* hero style start */
+.hero {
+    background-image: url("../css/hero-bg.jpg");
+    height: 600px;
+    background-size: cover; /* The background-size property can set the size of the background image to its original size or make it stretched, repeated, or constrained to fit the available space. */
+    background-position: center;
+    position: relative;
+}
+/* hero style end */
+
+.hero-form {
+    width: 500px;
+    color: #024e76;
+    background-color: #fce138;
+    padding: 20px;
+    border: solid 3px #024e76;
+    position: absolute;
+    bottom: 120px;
+    right: 140px;
+}
+
+.hero-form h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.hero-form p {
+    margin: 5px 0 15px 0;
+}
+
+.form-input {
+    border: 1px solid #024e76;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: #024e76;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.hero-form label {
+    margin: 0 5px;
+}
+
+.hero-form button {
+    background-color: #024e76;
+    color: #fce138;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+}
+/* HERO STYLES END */
