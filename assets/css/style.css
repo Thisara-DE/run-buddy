@@ -58,14 +58,18 @@ header nav {
   margin: 7px 0;
 }
 
-header nav ul li {
-  display: inline;
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
 }
 
 header nav ul li a {
   margin: 0 30px;
   font-weight: lighter;
-  font-size: 22px;
+  font-size: 1.55vw; /* changed this later from px to vw duting module 2. Remember that the viewport is the actual browser window size. By setting the value to 1.55vw, we're telling the browser that the font's size should be roughly 1.55% of the window's overall width. This means that if the browser grows or shrinks, that size will change relative to the new overall width. Viewport width is one of a few new methods we can use for flexible length values in CSS, but it can be tricky to nail down compared to absolute units of measurement like pixels. */
 }
 
 footer {
