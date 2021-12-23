@@ -101,7 +101,7 @@ section {
     height: 600px;
     background-size: cover; /* The background-size property can set the size of the background image to its original size or make it stretched, repeated, or constrained to fit the available space. */
     background-position: center;
-    position: relative;
+    position: relative;    
 }
 
 .hero-form {
@@ -112,7 +112,7 @@ section {
     border: solid 3px #024e76;
     position: absolute;
     bottom: 120px;
-    right: 140px;
+    right: 140px;    
 }
 
 .hero-form h3 {
