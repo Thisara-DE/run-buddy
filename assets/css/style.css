@@ -40,13 +40,22 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky; /* Note that we put the prefixed version first in the CSS, and the standardized version second. We should always put the standardized version of a property at the end of a sequence of vendor-prefixed versions. The browser will always apply the last version that it can interpret, and if we list an earlier, experimental version of the property last in the listing, then it would be used instead of the finalized version. */
+  top: 0; /* The top property is important because this tells the browser where to "stick" the element. We always want the header to be at the very top of the viewport, so top: 0; makes the most sense. */
+  background-image: url("../css/hero-bg.jpg");    
+  background-size: cover; /* The background-size property can set the size of the background image to its original size or make it stretched, repeated, or constrained to fit the available space. */
+  background-position: center; 
+  background-attachment: fixed;
+  background-position: 80%;
 }
 
 header h1 {
   font-weight: bold;
   font-size: 36px;
   color: #fce138;
-  margin: 0;  
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
 }
 
 header a {
@@ -70,6 +79,14 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw; /* changed this later from px to vw duting module 2. Remember that the viewport is the actual browser window size. By setting the value to 1.55vw, we're telling the browser that the font's size should be roughly 1.55% of the window's overall width. This means that if the browser grows or shrinks, that size will change relative to the new overall width. Viewport width is one of a few new methods we can use for flexible length values in CSS, but it can be tricky to nail down compared to absolute units of measurement like pixels. */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+header nav ul li a:hover {
+  background: #fce138;
+  color: #024e76;
+  border-radius: 15px;
+  text-shadow: none;
 }
 
 footer {
@@ -110,6 +127,8 @@ section {
     justify-content: center;
     flex-wrap: wrap;    
     align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 .hero-cta {
@@ -125,15 +144,18 @@ section {
   font-style: italic;
   font-size: 55px;
   color: #fce138;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 
 .hero-form {    
     color: #024e76;
-    background-color: #fce138;
+    background-color: rgba(252, 225, 56, 0.8);
     padding: 20px;
     border: solid 3px #024e76;
     width: 40%;
-    margin: 3.5%;        
+    margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    border-radius: 15px;       
 }
 
 .hero-form h3 {
@@ -153,6 +175,13 @@ section {
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.form-input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
 }
 
 .hero-form label {
@@ -165,6 +194,11 @@ section {
     padding: 10px 20px;
     border: none;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+.hero-form button:hover {
+  background-color: #39a6b2;
 }
 /* HERO STYLES END */
 
@@ -221,12 +255,16 @@ border-color: #39a6b2;
 .step {
   margin: 50px auto;
   padding-bottom: 50px;
-  width: 80%;
   border-bottom: 1px solid #39a6b2;
+  width: 80%;  
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.step:last-child {
+  border-bottom: none;
 }
 
 .step h3 {
@@ -379,6 +417,14 @@ In this case, it will apply the preceding styles to the three flexbox child elem
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
 }
 
 .contact-form button {
@@ -389,6 +435,12 @@ In this case, it will apply the preceding styles to the three flexbox child elem
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10px;
+}
+
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
 }
 /* reach out style end */
 
@@ -403,6 +455,7 @@ In this case, it will apply the preceding styles to the three flexbox child elem
     header {
       padding-bottom: 0;
       justify-content: center;
+      position: relative;
     }
 
     header h1 {
